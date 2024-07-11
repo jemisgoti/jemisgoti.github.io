@@ -1,1 +1,0 @@
-# jemisgoti.github.io
