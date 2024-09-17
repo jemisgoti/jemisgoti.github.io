@@ -22,11 +22,9 @@ jobs:
 
     - name: Install dependencies
       run: flutter pub get
-      working-directory: example
 
     - name: Build Flutter Web (Wasm)
       run: flutter build web --wasm
-      working-directory: example
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
