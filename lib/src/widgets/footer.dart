@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
@@ -46,7 +47,7 @@ class Footer extends StatelessWidget {
           ),
           const Gap(24),
           Text(
-            'Copyright ${DateTime.now().year} All rights reserved ',
+            'Copyright ${DateTime.now().year} All rights reserved : WASM :$kIsWasm',
             style: const TextStyle(
               fontSize: 16,
             ),
