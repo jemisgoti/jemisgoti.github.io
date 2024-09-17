@@ -47,7 +47,7 @@ class Footer extends StatelessWidget {
           ),
           const Gap(24),
           Text(
-            'Copyright ${DateTime.now().year} All rights reserved : WASM :$kIsWasm',
+            'Copyright ${DateTime.now().year} All rights reserved :: WASM :$kIsWasm',
             style: const TextStyle(
               fontSize: 16,
             ),
