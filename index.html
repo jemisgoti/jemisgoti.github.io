@@ -1,38 +1,547 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <!-- <base href="/"> -->
-<base href="/">
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="flutter_portfolio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>flutter_portfolio</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+<html lang="en">
+  <head>
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+    <link href="/styles.css" rel="stylesheet"/>
+    <script>
+      (function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}d.dataset.theme=t}catch(e){}})();
+    </script>
+    <script src="/site.js" defer></script>
+    <!--$-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Jemis Goti"/>
+    <meta name="color-scheme" content="light dark"/>
+    <meta name="theme-color" content="#f4f3ee"/>
+    <meta name="robots" content="index, follow, max-image-preview:large"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Jemis Goti — Flutter Engineer &amp; Dart Developer</title>
+    <meta name="description" content="Jemis Goti is a Flutter and Dart engineer building production mobile applications, native SDK integrations, real-time experiences, and open-source Flutter packages."/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="Jemis Goti — Flutter Engineer &amp; Dart Developer"/>
+    <meta name="twitter:description" content="Jemis Goti is a Flutter and Dart engineer building production mobile applications, native SDK integrations, real-time experiences, and open-source Flutter packages."/>
+    <link href="https://jemisgoti.github.io/" rel="canonical"/>
+    <meta property="og:type" content="profile"/>
+    <meta property="og:site_name" content="Jemis Goti"/>
+    <meta property="og:locale" content="en_IN"/>
+    <meta property="og:title" content="Jemis Goti — Flutter Engineer &amp; Dart Developer"/>
+    <meta property="og:description" content="Jemis Goti is a Flutter and Dart engineer building production mobile applications, native SDK integrations, real-time experiences, and open-source Flutter packages."/>
+    <meta property="og:url" content="https://jemisgoti.github.io/"/>
+    <meta property="profile:first_name" content="Jemis"/>
+    <meta property="profile:last_name" content="Goti"/>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Person","@id":"https://jemisgoti.github.io/#person","name":"Jemis Goti","url":"https://jemisgoti.github.io/","jobTitle":"Flutter Engineer","email":"mailto:jemis.dev@gmail.com","description":"Jemis Goti is a Flutter and Dart engineer building production mobile applications, native SDK integrations, real-time experiences, and open-source Flutter packages.","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Birla Vishvakarma Mahavidyalaya"},"knowsAbout":["Flutter","Dart","Flutter FFI","Platform Channels","Native SDK integration","Bluetooth Low Energy","WebRTC","Audio streaming","TensorFlow Lite","Internet of Things","Developer tooling","Open-source Flutter packages"],"sameAs":["https://github.com/jemisgoti","https://www.linkedin.com/in/jemis-goti/","https://medium.com/@jemisgoti","https://stackoverflow.com/users/21120002/jemis-goti"]}
+    </script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebSite","@id":"https://jemisgoti.github.io/#website","name":"Jemis Goti","url":"https://jemisgoti.github.io/","description":"Jemis Goti is a Flutter and Dart engineer building production mobile applications, native SDK integrations, real-time experiences, and open-source Flutter packages.","inLanguage":"en","author":{"@id":"https://jemisgoti.github.io/#person"}}
+    </script>
+    <!--/-->
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" aria-label="Jemis Goti — home" href="/"><span class="brand__mark" aria-hidden="true">jg</span><span class="brand__name">Jemis Goti</span></a>
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <ul role="list">
+            <li><a class="site-nav__link" href="/open-source/">Open Source</a></li>
+            <li><a class="site-nav__link" href="/work/">Work</a></li>
+            <li><a class="site-nav__link" href="/writing/">Writing</a></li>
+            <li><a class="site-nav__link" href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <a class="contact-btn" href="/contact/">
+            Contact
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch colour theme">
+            <svg class="icon icon--sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon icon--moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+          </button>
+          <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+            <svg class="icon icon--menu" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            <svg class="icon icon--close" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow hero__eyebrow"><span class="dot" aria-hidden="true"></span>Flutter &amp; Dart engineer · Mumbai, India</p>
+            <h1 id="hero-title" class="hero__title">
+              <span class="visually-hidden">Jemis Goti — </span>Flutter engineer building <em>beyond the widget tree.</em>
+            </h1>
+            <p class="hero__lead">
+              I build production-grade Flutter applications, native integrations, SDKs and developer tools — with a focus on performance, maintainability and the hard parts of mobile engineering.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="/work/">
+                View work
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn--ghost" href="/contact/">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                Get in touch
+              </a>
+              <a class="btn btn--ghost" href="/open-source/">
+                <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/></svg>
+                Open source
+              </a>
+            </div>
+          </div>
+          <figure class="stack" aria-labelledby="stack-caption">
+            <div class="stack__header"><span>the stack I work across</span><span class="stack__hint">depth ↓</span></div>
+            <ol class="stack__layers" role="list">
+              <li class="stack__layer">
+                <span class="stack__depth">L0</span><span class="stack__name">Widget tree</span><span class="stack__detail">Flutter · Dart · architecture</span>
+              </li>
+              <li class="stack__layer">
+                <span class="stack__depth">L1</span><span class="stack__name">Platform channels</span><span class="stack__detail">Android · iOS · native SDKs</span>
+              </li>
+              <li class="stack__layer">
+                <span class="stack__depth">L2</span><span class="stack__name">FFI</span><span class="stack__detail">dart:ffi · low-level integrations</span>
+              </li>
+              <li class="stack__layer">
+                <span class="stack__depth">L3</span><span class="stack__name">Devices &amp; streams</span><span class="stack__detail">BLE · Bluetooth Classic · audio · WebRTC</span>
+              </li>
+              <li class="stack__layer">
+                <span class="stack__depth">L4</span><span class="stack__name">Hardware &amp; models</span><span class="stack__detail">IoT sensors · TensorFlow Lite · AI APIs</span>
+              </li>
+            </ol>
+            <figcaption class="stack__caption" id="stack-caption">I like working on the parts of mobile development that don't have a ready-made solution.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="capabilities-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-head__meta"><span class="section-head__index">01</span><span class="section-head__eyebrow">Capabilities</span></div>
+            <div class="section-head__main">
+              <h2 id="capabilities-title" class="section-head__title">Deep Flutter, and everything <em>underneath it.</em></h2>
+              <p class="section-head__lead">
+                My work starts in Dart and regularly reaches into native SDKs, FFI, Bluetooth, audio, real-time communication and connected hardware.
+              </p>
+            </div>
+            <a class="text-link section-head__action" href="/about/">
+              More about me
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <ul class="capability-grid" role="list">
+            <li class="capability" data-reveal>
+              <span class="capability__index">01</span><h3 class="capability__title">Mobile engineering</h3><p class="capability__summary">Production Flutter apps with maintainable, scalable architecture.</p><ul class="tags tags--quiet" role="list"><li class="tag">Flutter</li><li class="tag">Dart</li><li class="tag">Android</li><li class="tag">iOS</li><li class="tag">Clean Architecture</li></ul>
+            </li>
+            <li class="capability" data-reveal>
+              <span class="capability__index">02</span><h3 class="capability__title">Platform integration</h3><p class="capability__summary">Reaching below the widget layer into native code and SDKs.</p><ul class="tags tags--quiet" role="list"><li class="tag">Platform Channels</li><li class="tag">Dart FFI</li><li class="tag">Native SDKs</li><li class="tag">BLE</li><li class="tag">Bluetooth Classic</li><li class="tag">MFi</li></ul>
+            </li>
+            <li class="capability" data-reveal>
+              <span class="capability__index">03</span><h3 class="capability__title">Real-time &amp; media</h3><p class="capability__summary">Streaming audio, video and data between devices and services.</p><ul class="tags tags--quiet" role="list"><li class="tag">WebRTC</li><li class="tag">Audio streaming</li><li class="tag">Audio processing</li><li class="tag">Video</li><li class="tag">WebSockets</li></ul>
+            </li>
+            <li class="capability" data-reveal>
+              <span class="capability__index">04</span><h3 class="capability__title">AI / ML</h3><p class="capability__summary">On-device models and AI-powered features inside mobile apps.</p><ul class="tags tags--quiet" role="list"><li class="tag">TensorFlow Lite</li><li class="tag">Image processing</li><li class="tag">AI integrations</li></ul>
+            </li>
+            <li class="capability" data-reveal>
+              <span class="capability__index">05</span><h3 class="capability__title">Infrastructure</h3><p class="capability__summary">The production plumbing around an app and its release.</p><ul class="tags tags--quiet" role="list"><li class="tag">Firebase</li><li class="tag">Google APIs</li><li class="tag">Payment gateways</li><li class="tag">Deep linking</li><li class="tag">App distribution</li></ul>
+            </li>
+            <li class="capability" data-reveal>
+              <span class="capability__index">06</span><h3 class="capability__title">Developer experience</h3><p class="capability__summary">Tools and packages other Flutter developers can build on.</p><ul class="tags tags--quiet" role="list"><li class="tag">Dart packages</li><li class="tag">Linting</li><li class="tag">Developer tooling</li><li class="tag">Documentation</li></ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section section--tinted" aria-labelledby="oss-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-head__meta"><span class="section-head__index">02</span><span class="section-head__eyebrow">Open source</span></div>
+            <div class="section-head__main">
+              <h2 id="oss-title" class="section-head__title">I don't just use Flutter. <em>I build for its ecosystem.</em></h2>
+              <p class="section-head__lead">Open-source Flutter packages and developer tools built to solve practical engineering problems.</p>
+            </div>
+            <a class="text-link section-head__action" href="/open-source/">
+              All packages
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="package-grid">
+            <article class="card package-card package-card--featured" id="simli_client" data-reveal>
+              <div class="package-card__top"><span class="package-card__category">Real-time media</span></div>
+              <h3 class="package-card__name">
+                <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/simli_client">simli_client</a>
+              </h3>
+              <p class="package-card__tagline">Real-time AI avatars in Flutter, over WebRTC.</p>
+              <div class="package-card__footer">
+                <ul class="tags" role="list">
+                  <li class="tag">Flutter</li>
+                  <li class="tag">Dart</li>
+                  <li class="tag">WebRTC</li>
+                  <li class="tag">WebSockets</li>
+                  <li class="tag">Audio streaming</li>
+                </ul>
+                <div class="link-row">
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/simli_client">
+                    pub.dev
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jemisgoti/simli-flutter-client">
+                    Source
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card package-card package-card--featured" id="visual_feedback" data-reveal>
+              <div class="package-card__top">
+                <span class="package-card__category">Developer tooling</span>
+                <span class="status">Early release</span>
+              </div>
+              <h3 class="package-card__name">
+                <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/visual_feedback">visual_feedback</a>
+              </h3>
+              <p class="package-card__tagline">In-app bug reports with annotated screenshots.</p>
+              <div class="package-card__footer">
+                <ul class="tags" role="list">
+                  <li class="tag">Flutter</li>
+                  <li class="tag">Dart</li>
+                  <li class="tag">Annotation</li>
+                  <li class="tag">Logging</li>
+                </ul>
+                <div class="link-row">
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/visual_feedback">
+                    pub.dev
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jemisgoti/visual_feedback">
+                    Source
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card package-card" id="hyper_lint" data-reveal>
+              <div class="package-card__top"><span class="package-card__category">Static analysis</span></div>
+              <h3 class="package-card__name">
+                <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/hyper_lint">hyper_lint</a>
+              </h3>
+              <p class="package-card__tagline">Stricter conventions for Dart &amp; Flutter codebases.</p>
+              <div class="package-card__footer">
+                <ul class="tags" role="list"><li class="tag">Dart</li><li class="tag">Flutter</li><li class="tag">Static analysis</li></ul>
+                <div class="link-row">
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/hyper_lint">
+                    pub.dev
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jemisgoti/hyper_lint">
+                    Source
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card package-card" id="simple_ripple_animation" data-reveal>
+              <div class="package-card__top">
+                <span class="package-card__category">Animation</span>
+                <span class="status">Maintained with Furkan Arslan</span>
+              </div>
+              <h3 class="package-card__name">
+                <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/simple_ripple_animation">simple_ripple_animation</a>
+              </h3>
+              <p class="package-card__tagline">Customisable ripple animations around any widget.</p>
+              <div class="package-card__footer">
+                <ul class="tags" role="list"><li class="tag">Flutter</li><li class="tag">Dart</li><li class="tag">Animation</li></ul>
+                <div class="link-row">
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/simple_ripple_animation">
+                    pub.dev
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jemisgoti/simple_ripple_animation">
+                    Source
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card package-card" id="slick_carousel" data-reveal>
+              <div class="package-card__top"><span class="package-card__category">UI components</span></div>
+              <h3 class="package-card__name">
+                <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/slick_carousel">slick_carousel</a>
+              </h3>
+              <p class="package-card__tagline">A controller-driven carousel for Flutter.</p>
+              <div class="package-card__footer">
+                <ul class="tags" role="list"><li class="tag">Flutter</li><li class="tag">Dart</li><li class="tag">UI components</li></ul>
+                <div class="link-row">
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://pub.dev/packages/slick_carousel">
+                    pub.dev
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                  <a class="text-link" target="_blank" rel="noopener noreferrer" href="https://github.com/jemisgoti/slick_carousel">
+                    Source
+                    <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" aria-labelledby="work-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-head__meta"><span class="section-head__index">03</span><span class="section-head__eyebrow">Selected work</span></div>
+            <div class="section-head__main">
+              <h2 id="work-title" class="section-head__title">Where software meets <em>hardware, media and models.</em></h2>
+              <p class="section-head__lead">Real-world engineering across real-time media, healthcare devices, IoT and computer vision.</p>
+            </div>
+            <a class="text-link section-head__action" href="/work/">
+              All work
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="project-list">
+            <article class="project" id="simli-flutter-client" data-reveal>
+              <div class="project__index" aria-hidden="true">01</div>
+              <div class="project__body">
+                <div class="project__meta"><span>Real-time media · Open source</span></div>
+                <h3 class="project__title">Simli Flutter Client</h3>
+                <p class="project__summary">
+                  A Flutter/WebRTC client for integrating real-time AI avatars and conversational video experiences into Flutter apps.
+                </p>
+                <ul class="tags" role="list">
+                  <li class="tag">Flutter</li>
+                  <li class="tag">WebRTC</li>
+                  <li class="tag">AI avatars</li>
+                  <li class="tag">WebSockets</li>
+                </ul>
+              </div>
+              <div class="project__links">
+                <a class="text-link" target="_blank" rel="noopener noreferrer" aria-label="Simli Flutter Client on GitHub" href="https://github.com/jemisgoti/simli-flutter-client">
+                  GitHub
+                  <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a class="text-link" target="_blank" rel="noopener noreferrer" aria-label="Simli Flutter Client on pub.dev" href="https://pub.dev/packages/simli_client">
+                  pub.dev
+                  <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </article>
+            <article class="project" id="digital-stethoscope" data-reveal>
+              <div class="project__index" aria-hidden="true">02</div>
+              <div class="project__body">
+                <div class="project__meta"><span>Healthcare · Connected hardware</span><span>2020–2021</span></div>
+                <h3 class="project__title">Digital Stethoscope</h3>
+                <p class="project__summary">Worked on a tubeless digital stethoscope, combining mobile software with connected medical hardware.</p>
+                <ul class="tags" role="list">
+                  <li class="tag">Mobile</li>
+                  <li class="tag">Bluetooth</li>
+                  <li class="tag">Audio</li>
+                  <li class="tag">Connected hardware</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project" id="agricare" data-reveal>
+              <div class="project__index" aria-hidden="true">03</div>
+              <div class="project__body">
+                <div class="project__meta"><span>IoT · Smart farming</span></div>
+                <h3 class="project__title">Agricare</h3>
+                <p class="project__summary">A mobile control and monitoring layer for connected agricultural infrastructure.</p>
+                <ul class="tags" role="list">
+                  <li class="tag">Flutter</li>
+                  <li class="tag">Firebase</li>
+                  <li class="tag">IoT</li>
+                  <li class="tag">Machine learning</li>
+                </ul>
+              </div>
+            </article>
+            <article class="project" id="visual-feedback" data-reveal>
+              <div class="project__index" aria-hidden="true">04</div>
+              <div class="project__body">
+                <div class="project__meta"><span>Developer tooling · Flutter package</span><span class="status">Early release</span></div>
+                <h3 class="project__title">visual_feedback</h3>
+                <p class="project__summary">
+                  Visual, contextual bug reporting for Flutter: users annotate a screenshot of the live app and the report arrives with recent logs attached.
+                </p>
+                <ul class="tags" role="list">
+                  <li class="tag">Flutter</li>
+                  <li class="tag">Annotation</li>
+                  <li class="tag">Bug reporting</li>
+                  <li class="tag">Logging</li>
+                </ul>
+              </div>
+              <div class="project__links">
+                <a class="text-link" target="_blank" rel="noopener noreferrer" aria-label="visual_feedback on Live demo" href="https://jemisgoti.github.io/visual_feedback/">
+                  Live demo
+                  <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a class="text-link" target="_blank" rel="noopener noreferrer" aria-label="visual_feedback on GitHub" href="https://github.com/jemisgoti/visual_feedback">
+                  GitHub
+                  <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a class="text-link" target="_blank" rel="noopener noreferrer" aria-label="visual_feedback on pub.dev" href="https://pub.dev/packages/visual_feedback">
+                  pub.dev
+                  <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section--tinted" aria-labelledby="writing-title">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-head__meta">
+              <span class="section-head__index">04</span>
+              <span class="section-head__eyebrow">Writing &amp; research</span>
+            </div>
+            <div class="section-head__main">
+              <h2 id="writing-title" class="section-head__title">Notes from <em>building with Flutter.</em></h2>
+              <p class="section-head__lead">Flutter releases, platform changes, app distribution and deep linking — plus published IoT research.</p>
+            </div>
+            <a class="text-link section-head__action" href="/writing/">
+              All writing
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <div class="split">
+            <div class="article-list">
+              <article class="article-row" data-reveal>
+                <div class="article-row__meta"><time datetime="2023-11-19">Nov 19, 2023</time><span class="article-row__platform">Medium</span></div>
+                <div class="article-row__main">
+                  <span class="article-row__category">Flutter</span>
+                  <h3 class="article-row__title">
+                    <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://medium.com/@jemisgoti/flutter-3-16-a-deep-dive-into-material-3-impeller-for-android-and-more-921b298a1fd7">Flutter 3.16: A Deep Dive into Material 3, Impeller for Android, and More!</a>
+                  </h3>
+                  <ul class="tags tags--quiet" role="list">
+                    <li class="tag">Material 3</li>
+                    <li class="tag">Impeller</li>
+                    <li class="tag">DevTools extensions</li>
+                    <li class="tag">Dart 3.2</li>
+                  </ul>
+                </div>
+                <span class="article-row__arrow"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+              </article>
+              <article class="article-row" data-reveal>
+                <div class="article-row__meta"><time datetime="2023-11-10">Nov 10, 2023</time><span class="article-row__platform">Medium</span></div>
+                <div class="article-row__main">
+                  <span class="article-row__category">Deep Linking</span>
+                  <h3 class="article-row__title">
+                    <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://medium.com/@jemisgoti/firebase-dynamic-links-deprecation-what-developers-need-to-know-c47ef5c3e518">Firebase Dynamic Links Deprecation: What Developers Need to Know</a>
+                  </h3>
+                  <ul class="tags tags--quiet" role="list"><li class="tag">Migration</li><li class="tag">App Links</li><li class="tag">Universal Links</li></ul>
+                </div>
+                <span class="article-row__arrow"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+              </article>
+              <article class="article-row" data-reveal>
+                <div class="article-row__meta"><time datetime="2023-11-03">Nov 3, 2023</time><span class="article-row__platform">LinkedIn</span></div>
+                <div class="article-row__main">
+                  <span class="article-row__category">Flutter</span>
+                  <h3 class="article-row__title">
+                    <a class="stretched" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jemis-goti/recent-activity/articles/">Why Choose Flutter for Your Next App Development: A Comprehensive Guide</a>
+                  </h3>
+                  <ul class="tags tags--quiet" role="list"><li class="tag">Cross-platform</li><li class="tag">Mobile engineering</li></ul>
+                </div>
+                <span class="article-row__arrow"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+              </article>
+            </div>
+            <article class="research card" data-reveal>
+              <div class="research__head">
+                <p class="research__venue">Psychology and Education Journal · Volume 58, No. 5 · 2021</p>
+                <h3 class="research__title">Smart Farming Support System Using IoT</h3>
+                <p class="research__summary">
+                  A system that lets farmers monitor environmental data and control agricultural equipment remotely, with real-time monitoring and intrusion detection.
+                </p>
+              </div>
+              <ol class="pipeline" aria-label="System pipeline">
+                <li>IoT</li>
+                <li>Sensors</li>
+                <li>Flutter</li>
+                <li>Maps</li>
+                <li>Machine learning</li>
+                <li>Agriculture</li>
+              </ol>
+              <dl class="research__specs">
+                <div>
+                  <dt>Hardware</dt>
+                  <dd>
+                    <ul class="tags" role="list">
+                      <li class="tag">ESP32</li>
+                      <li class="tag">Humidity sensor</li>
+                      <li class="tag">BMP180 pressure sensor</li>
+                      <li class="tag">PIR motion sensor</li>
+                    </ul>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Software</dt>
+                  <dd>
+                    <ul class="tags" role="list"><li class="tag">Flutter</li><li class="tag">Google Maps</li><li class="tag">Machine learning</li></ul>
+                  </dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-cta" id="contact">
+          <p class="eyebrow">Contact</p>
+          <h2 class="footer-cta__title">Have a hard Flutter problem? <em>Let's talk.</em></h2>
+          <p class="footer-cta__lead">
+            A new app, a native SDK or Bluetooth integration, real-time media, or a package — send a short note about what you're building and where it's stuck.
+          </p>
+          <div class="footer-cta__actions">
+            <a class="btn btn--light" href="mailto:jemis.dev@gmail.com?subject=Project%20enquiry">
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+              jemis.dev@gmail.com
+            </a>
+            <button class="btn btn--outline-light copy-btn" type="button" data-copy="jemis.dev@gmail.com">
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></svg>
+              <span class="copy-btn__label">Copy email</span>
+              <span class="copy-btn__done" aria-live="polite">Copied</span>
+            </button>
+            <a class="btn btn--outline-light" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jemis-goti/">
+              <svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <p class="footer-sub">Or explore the work</p>
+        <ul class="profile-grid" role="list">
+          <li>
+            <a class="profile-card" target="_blank" rel="noopener noreferrer" href="https://github.com/jemisgoti"><svg class="icon profile-card__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg><span class="profile-card__text"><span class="profile-card__label">GitHub</span><span class="profile-card__handle">jemisgoti</span></span><svg class="icon profile-card__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </li>
+          <li>
+            <a class="profile-card" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jemis-goti/"><svg class="icon profile-card__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="profile-card__text"><span class="profile-card__label">LinkedIn</span><span class="profile-card__handle">jemis-goti</span></span><svg class="icon profile-card__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </li>
+          <li>
+            <a class="profile-card" target="_blank" rel="noopener noreferrer" href="https://medium.com/@jemisgoti"><svg class="icon profile-card__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg><span class="profile-card__text"><span class="profile-card__label">Medium</span><span class="profile-card__handle">@jemisgoti</span></span><svg class="icon profile-card__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </li>
+          <li>
+            <a class="profile-card" target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/users/21120002/jemis-goti"><svg class="icon profile-card__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M15.73 0 14 1.28l6.39 8.59 1.72-1.28L15.73 0zm-3.94 3.42-1.37 1.64 8.22 6.85 1.37-1.64-8.22-6.85zM8.64 7.88l-.9 1.94 9.7 4.52.9-1.94-9.7-4.52zm-1.85 4.86-.44 2.1 10.47 2.2.44-2.1-10.47-2.2zM1.89 15.47V24h19.19v-8.53h-2.13v6.4H4.02v-6.4H1.89zm4.27 2.13v2.13h10.66V17.6H6.16z"/></svg><span class="profile-card__text"><span class="profile-card__label">Stack Overflow</span><span class="profile-card__handle">jemis-goti</span></span><svg class="icon profile-card__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </li>
+        </ul>
+        <div class="footer-bottom">
+          <p>© 2026 Jemis Goti · Mumbai, India</p>
+          <nav aria-label="Footer">
+            <ul role="list">
+              <li><a href="/">Home</a></li>
+              <li><a href="/open-source/">Open Source</a></li>
+              <li><a href="/work/">Work</a></li>
+              <li><a href="/writing/">Writing</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/contact/">Contact</a></li>
+            </ul>
+          </nav>
+          <p class="footer-bottom__built">Built in Dart with <a target="_blank" rel="noopener noreferrer" href="https://jaspr.site">Jaspr</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
