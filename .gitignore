@@ -1,0 +1,12 @@
+# OS / editors
+.DS_Store
+*.log
+*.swp
+.idea/
+*.iml
+.vscode/
+
+# Dart / Jaspr
+.dart_tool/
+.pub-cache/
+build/
